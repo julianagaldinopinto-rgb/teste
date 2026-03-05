@@ -2,54 +2,58 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Olá Mundo Estilizado</title>
+    <title>Olá Mundo - Corinthians</title>
     <style>
-        /* O CSS começa aqui */
         body {
-            background-color: #f0f2f5; /* Cor de fundo leve */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; /* Cor padrão do dark mode do GitHub */
+            color: #c9d1d9;
+            font-family: 'Courier New', Courier, monospace;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh; /* Ocupa a altura total da tela */
+            justify-content: center;
+            height: 100vh;
             margin: 0;
         }
 
-        .cartao {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .container {
             text-align: center;
-            border-top: 5px solid #007bff;
+            border: 1px solid #30363d;
+            padding: 40px;
+            border-radius: 10px;
+            background: #161b22;
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 10px; <div align="center">
-
-
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
+        .escudo {
+            width: 200px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+            margin-bottom: 20px;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .code-text {
+            color: #79c0ff;
+            font-size: 1.2rem;
+        }
+
+        .hashtag {
+            color: #8b949e;
+            margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="cartao">
+    <div class="container">
         <h1>Olá, Mundo!</h1>
-        <p>Este código agora tem estilo profissional.</p>
-        <button onclick="alert('Oi!')">Clique aqui</button>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/pt/1/10/Logo_Corinthians.png" class="escudo" alt="Corinthians">
+
+        <div class="code-text">
+            <code>console.log("Vai, Corinthians!!");</code>
+        </div>
+
+        <div class="hashtag">#TIMÃO</div>
     </div>
 
 </body>
