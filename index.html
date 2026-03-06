@@ -2,58 +2,72 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Olá Mundo - Corinthians</title>
+    <title>Barbie GitHub Hello World</title>
     <style>
         body {
-            background-color: #0d1117; /* Cor padrão do dark mode do GitHub */
-            color: #c9d1d9;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: #ff85ba; /* Rosa Barbie */
+            background-image: radial-gradient(circle, #ffb6d5 0%, #ff85ba 100%);
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            overflow: hidden;
         }
 
-        .container {
-            text-align: center;
-            border: 1px solid #30363d;
+        /* Painel flutuante simulando o vidro da imagem */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
             padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(255, 20, 147, 0.37);
+            text-align: center;
+            color: white;
+            max-width: 500px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 15px #fff, 0 0 25px #ff1493;
+            margin-bottom: 10px;
+        }
+
+        .code-snippet {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
             border-radius: 10px;
-            background: #161b22;
-        }
-
-        .escudo {
-            width: 200px;
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
-            margin-bottom: 20px;
-        }
-
-        .code-text {
-            color: #79c0ff;
-            font-size: 1.2rem;
-        }
-
-        .hashtag {
-            color: #8b949e;
-            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
+            color: #ffdae9;
+            border-left: 5px solid #ff1493;
+        }
+
+        .octocat-pink {
+            font-size: 80px;
+            margin: 20px 0;
+            filter: drop-shadow(0 0 10px #ff1493);
+        }
+
+        /* Animação de flutuar */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Olá, Mundo!</h1>
-        
-        <img src="https://upload.wikimedia.org/wikipedia/pt/1/10/Logo_Corinthians.png" class="escudo" alt="Corinthians">
-
-        <div class="code-text">
-            <code>console.log("Vai, Corinthians!!");</code>
+    <div class="glass-panel">
+        <div class="octocat-pink">🐙💖</div>
+        <h1>Olá Mundo!</h1>
+        <div class="code-snippet">
+            <span>console.log("Mundo!");</span>
         </div>
-
-        <div class="hashtag">#TIMÃO</div>
+        <p style="margin-top: 20px; font-weight: bold; letter-spacing: 2px;">GITHUB</p>
     </div>
 
 </body>
