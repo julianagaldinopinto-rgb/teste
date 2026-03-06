@@ -2,74 +2,30 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Barbie GitHub Hello World</title>
+    <title>Barbie GitHub</title>
     <style>
         body {
-            background-color: #ff85ba; /* Rosa Barbie */
-            background-image: radial-gradient(circle, #ffb6d5 0%, #ff85ba 100%);
-            height: 100vh;
+            background-color: #ff85ba; /* Fundo rosa para combinar */
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
+            height: 100vh;
             overflow: hidden;
         }
 
-        /* Painel flutuante simulando o vidro da imagem */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 8px 32px 0 rgba(255, 20, 147, 0.37);
-            text-align: center;
-            color: white;
-            max-width: 500px;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        h1 {
-            font-size: 3rem;
-            text-shadow: 0 0 15px #fff, 0 0 25px #ff1493;
-            margin-bottom: 10px;
-        }
-
-        .code-snippet {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 10px;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            color: #ffdae9;
-            border-left: 5px solid #ff1493;
-        }
-
-        .octocat-pink {
-            font-size: 80px;
-            margin: 20px 0;
-            filter: drop-shadow(0 0 10px #ff1493);
-        }
-
-        /* Animação de flutuar */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            display: block;
+            /* Opcional: adiciona um brilho suave ao redor da imagem */
+            filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
         }
     </style>
 </head>
 <body>
-<img src="\imagem\barbie.png" alt="barbie">
 
-    <div class="glass-panel">
-        <div class="octocat-pink">🐙💖</div>
-        <h1>Olá Mundo!</h1>
-        <div class="code-snippet">
-            <span>console.log("Mundo!");</span>
-        </div>
-        <p style="margin-top: 20px; font-weight: bold; letter-spacing: 2px;">GITHUB</p>
-    </div>
+    <img src="imagem/barbie.png" alt="Barbie GitHub">
 
 </body>
 </html>
