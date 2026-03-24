@@ -2,67 +2,154 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Barbie GitHub Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
     <style>
-        body {
-            background-color: #ff85ba;
-            background-image: radial-gradient(circle, #ffb6d5 0%, #ff85ba 100%);
+        /* Reset de estilos para consistência entre navegadores */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
             display: flex;
-            flex-direction: column; /* Coloca os itens um abaixo do outro */
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            overflow: hidden;
+            min-height: 100vh;
+            padding: 20px;
         }
 
-        .container {
+        /* Container do Formulário */
+        .card-cadastro {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h2 {
             text-align: center;
+            color: #333;
+            margin-bottom: 30px;
         }
 
-        img {
-            max-width: 350px; /* Define um tamanho menor para a imagem */
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px; /* Espaço entre a imagem e o botão */
+        /* Grupos de entrada */
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        .btn-barbie {
-            display: inline-block;
-            padding: 15px 35px;
-            background-color: #ff1493; /* Rosa Choque */
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+        }
+
+        /* Efeito visual ao clicar no campo */
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4A90E2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        /* Layout de duas colunas */
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        /* Botão de envio */
+        .btn-enviar {
+            width: 100%;
+            padding: 15px;
+            background-color: #4A90E2;
             color: white;
-            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
-            border: 2px solid white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
         }
 
-        .btn-barbie:hover {
-            background-color: white;
-            color: #ff1493;
-            transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+        .btn-enviar:hover {
+            background-color: #357ABD;
+        }
+
+        /* Ajuste para telas de celular */
+        @media (max-width: 480px) {
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .card-cadastro {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="imagem/barbie.png" alt="Barbie GitHub">
-        
-        <br>
+<div class="card-cadastro">
+    <h2>Novo Cliente</h2>
+    
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+        </div>
 
-        <a href="https://barbie.mattel.com" target="_blank" class="btn-barbie">
-            Acessar Site da Barbie
-        </a>
-    </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Tipo de Cliente</label>
+            <select id="tipo" name="tipo">
+                <option value="bronze">Bronze</option>
+                <option value="prata">Prata</option>
+                <option value="ouro">Ouro (VIP)</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-enviar">Cadastrar Cliente</button>
+    </form>
+</div>
 
 </body>
 </html>
